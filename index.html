@@ -23,48 +23,67 @@
           <img src="http://lorempixel.com/185/185/peoplo/" alt="Foto Pessoal" />
         </div>
 
-        <h1>Daniel Medrado</h1>
-        <a href="https://github.com/daniell0l">
+        <h1 id="userName">Daniel Medrado</h1>
+        <a href="https://github.com/daniell0l" target="_blank" >
           <img src="images/GitHub.svg" alt="icone GitHub" />
-          danielmedrado</a
+          Daniell0l</a
         >
 
         <p>TEXTO</p>
-        <ul>
-          <li>
-            <a href="http://youtube.com/darkzinho155">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="http://youtube.com/darkzinho155" target="_blank" >
               <img
                 src="images/youtube.svg"
                 alt="icone youtube"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=100003891436040">
+          <li class="facebook">
+            <a href="https://www.facebook.com/profile.php?id=100003891436040" target="_blank" >
               <img
                 src="images/facebook.svg"
                 alt="icone facebook"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/daniel_medrado.f/">
+          <li class="instagram">
+            <a href="https://www.instagram.com/daniel_medrado.f/"  target="_blank" >
               <img
                 src="images/instagram.svg"
                 alt="icone instagram"
-                target="_blank"
               />
             </a>
           </li>
-          <li>
-            <a href="http://twitter.com">
-              <img src="images/twiter.svg" alt="icone twiter" target="_blank" />
+          <li class="twitter">
+            <a href="http://twitter.com" target="_blank">
+              <img src="images/twiter.svg" alt="icone twiter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'daniell0l',
+        youtube: 'darkzinho155',
+        facebook: 'profile.php?id=100003891436040',
+        instagram: 'daniel_medrado.f',
+        twitter: 'daniel medrado'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          //alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
