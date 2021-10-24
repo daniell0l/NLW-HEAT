@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
   <body></body>
 </html>
 
-<html>
+<html lang="pt-BR"> 
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Medrado - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -20,70 +23,48 @@
             
             <img src="images/build.png" alt="Selo Rocketseat" />
           </span>
-          <img src="http://lorempixel.com/185/185/peoplo/" alt="Foto Pessoal" />
+          <img src="http://lorempixel.com/185/185/peoplo/" alt="Foto Pessoal"
+          id="UserImage"
+          />
         </div>
 
         <h1 id="userName">Daniel Medrado</h1>
-        <a href="https://github.com/daniell0l" target="_blank" >
+        <a id="userLink" href="https://github.com/daniell0l" target="_blank" >
           <img src="images/GitHub.svg" alt="icone GitHub" />
-          Daniell0l</a
-        >
+         <span id="userLogin">Daniell0l</span></a>
 
-        <p>TEXTO</p>
+        <p id="userBio">Junior developer at G6 Tech, I was not born to compete with others, but to surpass myself.</p>
         <ul id="socialLinks">
           <li class="youtube">
             <a href="http://youtube.com/darkzinho155" target="_blank" >
               <img
                 src="images/youtube.svg"
-                alt="icone youtube"
-              />
+                alt="icone youtube"/>
             </a>
           </li>
           <li class="facebook">
             <a href="https://www.facebook.com/profile.php?id=100003891436040" target="_blank" >
               <img
                 src="images/facebook.svg"
-                alt="icone facebook"
-              />
+                alt="icone facebook"/>
             </a>
           </li>
           <li class="instagram">
             <a href="https://www.instagram.com/daniel_medrado.f/"  target="_blank" >
               <img
                 src="images/instagram.svg"
-                alt="icone instagram"
-              />
+                alt="icone instagram"/>
             </a>
           </li>
           <li class="twitter">
             <a href="http://twitter.com" target="_blank">
-              <img src="images/twiter.svg" alt="icone twiter" />
+              <img src="images/twiter.svg" alt="icone twiter"/>
             </a>
           </li>
         </ul>
       </div>
-    </main>
-
-    <script>
-      const LinksSocialMedia = {
-        github: 'daniell0l',
-        youtube: 'darkzinho155',
-        facebook: 'profile.php?id=100003891436040',
-        instagram: 'daniel_medrado.f',
-        twitter: 'daniel medrado'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          //alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
-  </body>
+    </main> 
+    <script src="main.js"></script>
+  </body> 
 </html>
+ 
